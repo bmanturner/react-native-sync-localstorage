@@ -1,6 +1,6 @@
 {
   "name": "react-native-sync-localstorage",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "None async local storage",
   "main": "localStorage.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yangga/react-native-sync-localstorage.git"
+    "url": "git+https://github.com/miquelbarba/react-native-sync-localstorage.git"
   },
   "keywords": [
     "react",
