@@ -28,7 +28,7 @@ function getAllItemsForKeys(keys) {
     .map(key => AsyncStorage
       .getItem(key)
       .then(data => JSON.parse(data))
-      .then(data => { 
+      .then(data => {
         storage.set(key, data)
         return {[key]: data }
       })
@@ -37,7 +37,8 @@ function getAllItemsForKeys(keys) {
   return Promise
     .all(promiseAll)
     .then(flatMap)
-    .catch(error => console.log('Storage ERROR - getAllItemsForKeys!', error))
+    // we raise the exception, in the app we clear the storage
+    //.catch(error => console.log('Storage ERROR - getAllItemsForKeys!', error))
 }
 
 function flatMap(allData) {
