@@ -37,8 +37,7 @@ function getAllItemsForKeys(keys) {
   return Promise
     .all(promiseAll)
     .then(flatMap)
-    // we raise the exception, in the app we clear the storage
-    //.catch(error => console.log('Storage ERROR - getAllItemsForKeys!', error))
+    .catch(error => console.log('Storage ERROR - getAllItemsForKeys!', error))
 }
 
 function flatMap(allData) {
